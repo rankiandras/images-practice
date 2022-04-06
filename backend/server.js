@@ -10,6 +10,7 @@ app.use(express.json());
 const pathToFrontend = path.join(`${__dirname}/../frontend`);
 
 app.use('/public', express.static(`${pathToFrontend}/public`));
+app.use('/dist', express.static(`${pathToFrontend}/dist`));
 
 app.get('/', (req, res) => {
     res.sendFile(`${pathToFrontend}/index.html`);
